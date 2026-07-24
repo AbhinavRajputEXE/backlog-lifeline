@@ -1,0 +1,87 @@
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top right, #21356f 0%, transparent 35%),
+    radial-gradient(circle at bottom left, #153f3d 0%, transparent 30%),
+    #090c16;
+}
+
+.hero {
+  width: min(100%, 760px);
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: #8fa6ff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+h1 {
+  max-width: 650px;
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.intro {
+  max-width: 550px;
+  margin: 28px 0;
+  color: #b8c1d9;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.connection-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid #2b3658;
+  border-radius: 16px;
+  background: rgb(12 18 35 / 78%);
+  box-shadow: 0 18px 50px rgb(0 0 0 / 20%);
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 auto;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: #43e59b;
+  box-shadow: 0 0 16px #43e59b;
+}
+
+.connection-label,
+.connection-message,
+.connection-error {
+  margin: 0;
+}
+
+.connection-label {
+  color: #8491b5;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.connection-message {
+  margin-top: 5px;
+  color: #e3e9ff;
+}
+
+.connection-error {
+  margin-top: 5px;
+  color: #ff9d9d;
+}
