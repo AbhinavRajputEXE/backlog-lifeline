@@ -182,3 +182,197 @@ button:disabled {
   color: #8fa6ff;
   white-space: nowrap;
 }
+.calculator-card {
+  margin-top: 20px;
+  padding: 24px;
+  border: 1px solid #2b3658;
+  border-radius: 18px;
+  background: rgb(12 18 35 / 78%);
+  box-shadow: 0 18px 50px rgb(0 0 0 / 20%);
+}
+
+.calculator-card h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.calculator-intro {
+  margin: 10px 0 22px;
+  color: #8f9bb9;
+  line-height: 1.5;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.calculator-grid label {
+  display: grid;
+  gap: 8px;
+  color: #cbd4ec;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.future-result {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #1e3065, #133e3b);
+}
+
+.future-result p,
+.future-result span {
+  margin: 0;
+}
+
+.future-result p {
+  color: #b8c7f7;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.future-result strong {
+  display: block;
+  margin: 8px 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1;
+}
+
+.future-result span {
+  color: #c4d0ef;
+}
+
+@media (max-width: 600px) {
+  .calculator-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.section-heading {
+  margin: 28px 0 12px;
+  font-size: 1rem;
+}
+
+.time-breakdown {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.time-breakdown div {
+  padding: 16px;
+  border-radius: 12px;
+  background: #10182e;
+}
+
+.time-breakdown span,
+.time-breakdown strong {
+  display: block;
+}
+
+.time-breakdown span {
+  color: #8f9bb9;
+  font-size: 0.8rem;
+}
+
+.time-breakdown strong {
+  margin-top: 6px;
+  color: #e9edff;
+  font-size: 1.4rem;
+}
+
+.warning-message {
+  margin: 16px 0 0;
+  color: #ffcf87;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .time-breakdown {
+    grid-template-columns: 1fr;
+  }
+}
+.simple-calculator {
+  display: grid;
+  gap: 24px;
+}
+
+.simple-calculator label {
+  display: grid;
+  gap: 8px;
+  color: #cbd4ec;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.pace-label {
+  margin: 0 0 8px;
+  color: #cbd4ec;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.pace-value {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.pace-value span {
+  color: #8f9bb9;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.pace-slider {
+  width: 100%;
+  margin: 16px 0;
+  padding: 0;
+  accent-color: #8fa6ff;
+}
+
+.pace-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pace-options button {
+  padding: 9px 12px;
+  color: #cbd4ec;
+  background: #10182e;
+  border: 1px solid #3b4a73;
+  font-size: 0.85rem;
+}
+
+.retirement-toggle {
+  display: flex !important;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 12px !important;
+  padding: 16px;
+  border: 1px solid #2b3658;
+  border-radius: 12px;
+  background: #10182e;
+}
+
+.retirement-toggle input {
+  width: 18px;
+  height: 18px;
+  accent-color: #8fa6ff;
+}
+
+.retirement-toggle span {
+  display: grid;
+  gap: 3px;
+}
+
+.retirement-toggle small {
+  color: #8f9bb9;
+  font-weight: 400;
+}
