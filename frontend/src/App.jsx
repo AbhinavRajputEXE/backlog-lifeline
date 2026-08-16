@@ -25,7 +25,7 @@ function App() {
           body: JSON.stringify({
             profile_url: profileUrl,
           }),
-        },
+        }
       );
 
       const data = await response.json();
@@ -50,8 +50,8 @@ function App() {
         <h1>Will you finish your games in this lifetime?</h1>
 
         <p className="intro">
-          We will compare your Steam library with the gaming time you may have
-          left. The result may be comforting. Or brutally honest.
+          Connect your public Steam profile and find out what your game library
+          is really asking of you.
         </p>
 
         <form className="profile-form" onSubmit={handleSubmit}>
@@ -68,7 +68,7 @@ function App() {
             />
 
             <button type="submit" disabled={isLoading}>
-              {isLoading ? "Analysing…" : "Analyse backlog"}
+              {isLoading ? "Importing…" : "Analyse backlog"}
             </button>
           </div>
 
@@ -82,8 +82,10 @@ function App() {
 
         {libraryPreview && (
           <section className="preview-card">
-            <p className="preview-label">DEMO LIBRARY IMPORT</p>
-            <h2>Welcome, {libraryPreview.profile_name}</h2>
+            <p className="preview-label">LIVE STEAM LIBRARY</p>
+            <h2>Your backlog begins here.</h2>
+
+            <p className="steam-id">Steam ID: {libraryPreview.steam_id}</p>
 
             <div className="stats">
               <div>
@@ -92,14 +94,23 @@ function App() {
               </div>
 
               <div>
-                <strong>{libraryPreview.total_playtime_hours.toLocaleString()}</strong>
-                <span>hours played</span>
+                <strong>
+                  {libraryPreview.total_playtime_hours.toLocaleString()}
+                </strong>
+                <span>hours already played</span>
               </div>
             </div>
 
-            <p className="demo-note">
-              Demo data for now—real Steam library import comes next.
-            </p>
+            <h3>Most played games</h3>
+
+            <ul className="game-list">
+              {libraryPreview.most_played_games.map((game) => (
+                <li key={game.name}>
+                  <span>{game.name}</span>
+                  <strong>{game.playtime_hours}h</strong>
+                </li>
+              ))}
+            </ul>
           </section>
         )}
       </section>
